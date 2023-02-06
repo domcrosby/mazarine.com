@@ -10,30 +10,30 @@ export const NavBar = () => {
           Mazarine
         </Link>
         <div className="flex space-x-2 sm:space-x-4 right-0">
-          <a
+          <Link
             href="/services"
             className={`block font-light border-blue-900 ${
               pathname == "/services" ? "border-b-2" : ""
             }`}
           >
             Services
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className={`block font-light border-blue-900 ${
               pathname == "/about" ? "border-b-2" : ""
             }`}
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className={`block font-light border-blue-900 ${
               pathname == "/contact" ? "border-b-2" : ""
             }`}
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </header>
