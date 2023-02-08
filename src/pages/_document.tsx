@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { classNames } from "@/libs";
+import { classNames, Flex } from "@/libs";
 
 const maxWidth = "max-w-7xl";
 
@@ -17,9 +17,9 @@ class MyDocument extends Document {
 
           <NextScript />
           <footer className="z-50 p-8 bg-blue-900 absolute h-32 bottom-0 w-screen flex justify-center">
-            <div
+            <Flex
               className={classNames(
-                "flex justify-between items-center w-full",
+                "justify-between items-center w-full",
                 maxWidth
               )}
             >
@@ -27,7 +27,7 @@ class MyDocument extends Document {
               <p className="flex space-x-4 right-0 text-slate-50">
                 Made by hand
               </p>
-            </div>
+            </Flex>
           </footer>
         </body>
       </Html>
