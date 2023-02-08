@@ -1,16 +1,17 @@
 import Head from "next/head";
 // import Image from "next/image";
 // import homePic from "../public/home.jpeg";
-import { NavBar } from "../components";
+import { Hero, NavBar } from "../components";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Mazarine</title>
+        <title>Mazarine Consulting</title>
       </Head>
       <NavBar />
       <>
+        <Hero />
         <div className="text-center p-8 ">
           <p className="mt-2 text-3xl font-light leading-8 tracking-tight text-gray-900 sm:text-4xl">
             Landscape photographer based in Boulder, Colorado.
