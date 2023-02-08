@@ -1,4 +1,4 @@
-import { classNames } from "../../classNames/classNames";
+import clsx from "clsx";
 
 interface DesktopOnlyProps {
   className?: string;
@@ -6,5 +6,5 @@ interface DesktopOnlyProps {
 }
 
 export const DesktopOnly = ({ className = "", children }: DesktopOnlyProps) => (
-  <div className={classNames(className, "hidden")}>{children}</div>
+  <div className={clsx(className, "hidden")}>{children}</div>
 );
