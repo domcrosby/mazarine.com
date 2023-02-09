@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Container } from "@/libs";
 import logoAirtable from "@/images/logos/airtable.svg";
+import logoUnity from "@/images/logos/unity.svg";
 
 export function Hero() {
   return (
@@ -35,8 +36,8 @@ export function Hero() {
         >
           {[
             [
-              { name: "Transistor", logo: logoAirtable },
-              { name: "Tuple", logo: logoAirtable },
+              { name: "Air Table", logo: logoAirtable },
+              { name: "Unity", logo: logoUnity },
               { name: "StaticKit", logo: logoAirtable },
             ],
             [
