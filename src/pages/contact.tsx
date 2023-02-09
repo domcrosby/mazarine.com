@@ -1,90 +1,113 @@
 import Head from "next/head";
-import { NavBar } from "../components";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function Home() {
+import backgroundImage from "@/images/background-auth.jpg";
+import { Button, SelectField, TextField, Flex } from "@/libs";
+import { Logo } from "@/components";
+
+export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact - Mazarine</title>
+        <title>Sign Up - TaxPal</title>
       </Head>
-      <NavBar />
-      <>
-        <div className="flex justify-center ">
-          <div className="text-center p-8 w-full md:w-3/5 max-w-2xl">
-            <p className="mt-2 text-3xl font-light leading-8 tracking-tight text-gray-900">
-              Please fill out the form below to request a quote for a project,
-              inquire about a collaboration, or simply say hello.
-            </p>
-            <div className="py-4 px-2 center text-left">
-              <div className="mt-8">
-                <div className="grid grid-cols-1 gap-6">
-                  <label className="block">
-                    <span className="text-gray-700">Full name</span>
-                    <input
-                      type="text"
-                      className="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  "
-                      placeholder=""
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="text-gray-700">Your Email address</span>
-                    <input
-                      type="email"
-                      className="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  "
-                      placeholder="john@example.com"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="text-gray-700">Subject</span>
-                    <input
-                      type="text"
-                      className="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  "
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="text-gray-700">Message</span>
-                    <textarea
-                      className="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  "
-                      rows={4}
-                    ></textarea>
-                  </label>
-                </div>
-                <button className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 mt-8 rounded-full">
-                  Submit
-                </button>
+      <Flex className="relative min-h-full justify-center md:px-12 lg:px-0">
+        <Flex className="relative z-10 flex-1 flex-col bg-white py-10 px-4 shadow-2xl sm:justify-center md:flex-none md:px-28">
+          <div className="mx-auto w-full max-w-md sm:px-4 md:w-96 md:max-w-sm md:px-0">
+            <Flex className="flex-col">
+              <Link href="/" aria-label="Home">
+                <Logo className="h-10 w-auto" />
+              </Link>
+              <div className="mt-20">
+                <h2 className="text-lg font-semibold text-gray-900">
+                  Get started for free
+                </h2>
+                <p className="mt-2 text-sm text-gray-700">
+                  Already registered?{" "}
+                  <Link
+                    href="/login"
+                    className="font-medium text-blue-600 hover:underline"
+                  >
+                    Sign in
+                  </Link>{" "}
+                  to your account.
+                </p>
               </div>
-            </div>
+            </Flex>
+            <form
+              action="#"
+              className="mt-10 grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-2"
+            >
+              <TextField
+                label="First name"
+                id="first_name"
+                name="first_name"
+                type="text"
+                autoComplete="given-name"
+                required
+              />
+              <TextField
+                label="Last name"
+                id="last_name"
+                name="last_name"
+                type="text"
+                autoComplete="family-name"
+                required
+              />
+              <TextField
+                className="col-span-full"
+                label="Email address"
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+              />
+              <TextField
+                className="col-span-full"
+                label="Password"
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="new-password"
+                required
+              />
+              <SelectField
+                className="col-span-full"
+                label="How did you hear about us?"
+                id="referral_source"
+                name="referral_source"
+              >
+                <option>AltaVista search</option>
+                <option>Super Bowl commercial</option>
+                <option>Our route 34 city bus ad</option>
+                <option>The “Never Use This” podcast</option>
+              </SelectField>
+              <div className="col-span-full">
+                <Button
+                  type="submit"
+                  variant="solid"
+                  color="blue"
+                  className="w-full"
+                >
+                  <span>
+                    Sign up <span aria-hidden="true">&rarr;</span>
+                  </span>
+                </Button>
+              </div>
+            </form>
           </div>
+        </Flex>
+        <div className="hidden sm:contents lg:relative lg:block lg:flex-1">
+          <Image
+            className="absolute inset-0 h-full w-full object-cover"
+            src={backgroundImage}
+            alt=""
+            unoptimized
+          />
         </div>
-      </>
+      </Flex>
     </>
   );
 }

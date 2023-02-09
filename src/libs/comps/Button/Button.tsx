@@ -31,6 +31,7 @@ type ButtonProps = {
   className?: string;
   href?: string;
   children: React.ReactNode;
+  type?: "submit" | "reset" | "button" | undefined;
 };
 
 export const Button = ({
