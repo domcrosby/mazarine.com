@@ -2,7 +2,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html className="h-full scroll-smooth bg-white antialiased" lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
         </Head>
