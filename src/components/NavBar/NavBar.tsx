@@ -13,7 +13,7 @@ export const NavBar = () => {
           <Flex className="space-x-2 sm:space-x-4 right-0">
             <Link
               href="/services"
-              className={`block font-light border-blue-900 ${
+              className={`block font-light border-primary ${
                 pathname == "/services" ? "border-b-2" : ""
               }`}
             >
@@ -21,7 +21,7 @@ export const NavBar = () => {
             </Link>
             <Link
               href="/about"
-              className={`block font-light border-blue-900 ${
+              className={`block font-light border-primary ${
                 pathname == "/about" ? "border-b-2" : ""
               }`}
             >
@@ -29,7 +29,7 @@ export const NavBar = () => {
             </Link>
             <Link
               href="/contact"
-              className={`block font-light border-blue-900 ${
+              className={`block font-light border-primary ${
                 pathname == "/contact" ? "border-b-2" : ""
               }`}
             >

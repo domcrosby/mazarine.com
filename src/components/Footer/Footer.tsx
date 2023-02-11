@@ -1,7 +1,7 @@
 import { Flex, Container } from "@/libs";
 
 export const Footer = () => (
-  <footer className="z-50 p-8 bg-blue-900 absolute h-32 w-screen ">
+  <footer className="z-50 p-8 bg-primary h-32 w-screen">
     <Container>
       <Flex className="justify-between items-center w-full">
         <p className="text-3xl font-light text-slate-50">Mazarine</p>
