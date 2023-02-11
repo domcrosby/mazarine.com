@@ -2,7 +2,7 @@ import Head from "next/head";
 // import Image from "next/image";
 // import homePic from "../public/home.jpeg";
 import { Companies, Hero, Footer, NavBar } from "../components";
-import { Flex } from "@/libs";
+import { Flex, Grow } from "@/libs";
 
 export default function Home() {
   return (
@@ -12,10 +12,10 @@ export default function Home() {
       </Head>
       <Flex column full>
         <NavBar />
-        <main className="flex-grow">
+        <Grow>
           <Hero />
           <Companies />
-        </main>
+        </Grow>
         <Footer />
       </Flex>
     </>
