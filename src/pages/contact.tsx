@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import { Button, SelectField, TextField } from "@/libs";
+import { Button, Flex, SelectField, TextField } from "@/libs";
 import { AuthLayout, Logo } from "@/components";
 
 export default function Contact() {
@@ -11,7 +11,7 @@ export default function Contact() {
         <title>Contact - Mazarine</title>
       </Head>
       <AuthLayout>
-        <div className="flex flex-col">
+        <Flex column>
           <Logo />
           <div className="mt-20">
             <h2 className="text-lg font-semibold text-gray-900">
@@ -28,7 +28,7 @@ export default function Contact() {
               to your account.
             </p>
           </div>
-        </div>
+        </Flex>
         <form
           action="#"
           className="mt-10 grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-2"
