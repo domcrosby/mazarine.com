@@ -1,7 +1,9 @@
-import { Container, Flex } from "@/libs";
+import { capitalize, Container, Flex } from "@/libs";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Logo } from "../Logo/Logo";
+
+const links = ["services", "team", "contact"];
 
 export const NavBar = () => {
   const { pathname } = useRouter();
@@ -11,30 +13,19 @@ export const NavBar = () => {
         <Flex className="justify-between items-end">
           <Logo />
           <Flex className="space-x-2 sm:space-x-4 right-0">
-            <Link
-              href="/services"
-              className={`block font-light border-primary ${
-                pathname == "/services" ? "border-b-2" : ""
-              }`}
-            >
-              Services
-            </Link>
-            <Link
-              href="/about"
-              className={`block font-light border-primary ${
-                pathname == "/about" ? "border-b-2" : ""
-              }`}
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className={`block font-light border-primary ${
-                pathname == "/contact" ? "border-b-2" : ""
-              }`}
-            >
-              Contact
-            </Link>
+            {links.map((link) => (
+              <Link
+                href={`/${link}`}
+                key={link}
+                className={`block font-light border-b-2  ${
+                  pathname == `/${link}`
+                    ? "border-primary"
+                    : "border-transparent"
+                }`}
+              >
+                {capitalize(link)}
+              </Link>
+            ))}
           </Flex>
         </Flex>
       </Container>
