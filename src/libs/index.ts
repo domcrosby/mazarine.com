@@ -1,1 +1,2 @@
-export * from "./comps";
+export * from "./components";
+export * from "./layouts";

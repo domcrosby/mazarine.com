@@ -1,11 +1,10 @@
 import Image from "next/image";
 
-import { Container } from "@/libs";
 import logoAirtable from "@/images/logos/airtable.svg";
 import logoUnity from "@/images/logos/unity.svg";
 
 export const Companies = () => (
-  <Container className="pt-8 pb-16 text-center lg:pt-32">
+  <div className="pt-8 pb-16 text-center lg:pt-32">
     <div className="mt-16 lg:mt-16">
       <p className="font-display text-base text-slate-900">
         Trusted by these six companies so far
@@ -41,5 +40,5 @@ export const Companies = () => (
         ))}
       </ul>
     </div>
-  </Container>
+  </div>
 );
