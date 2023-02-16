@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { NavBar } from "../components";
+
+import { Standard } from "@/layouts";
 
 const services = [
   {
@@ -40,8 +41,7 @@ export default function Home() {
       <Head>
         <title>Services - Mazarine</title>
       </Head>
-      <NavBar />
-      <>
+      <Standard>
         <div className="text-center p-8 ">
           <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
             Our Services
@@ -55,7 +55,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </>
+      </Standard>
     </>
   );
 }
